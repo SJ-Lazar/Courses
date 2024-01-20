@@ -1,13 +1,13 @@
 ﻿using System;
 using CSharpFunctionalExtensions;
 
-var result = DoWork("Hello");
-string? message = result.IsSuccess ? $"Success: {result.Value}" : $"Failed: {result.Error}";
-Console.WriteLine(message);
+    var result = DoWork("Hello");
+    string? message = result.IsSuccess ? $"Success: {result.Value}" : $"Failed: {result.Error}";
+    Console.WriteLine(message);
 
-result = DoWork(null);
-message = result.IsSuccess ? $"Success: {result.Value}" : $"Failed: {result.Error}";
-Console.WriteLine(message);
+    result = DoWork(null);
+    message = result.IsSuccess ? $"Success: {result.Value}" : $"Failed: {result.Error}";
+    Console.WriteLine(message);
 
 static Result<string> DoWork(string input)
 {
